@@ -9,6 +9,8 @@ import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { CartoonPage } from '../pages/cartoon/cartoon';
+import { DevPage } from '../pages/dev/dev';
+import { MainPage } from '../pages/main/main';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,20 @@ import { CartoonPage } from '../pages/cartoon/cartoon';
     HomePage,
     LoginPage,
     SignupPage,
-    CartoonPage
+    CartoonPage,
+    DevPage,
+    MainPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp,{
+      menuType: 'push',
+      platforms: {
+        ios: {
+          menuType: 'overlay',
+        }
+      }
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -28,12 +39,15 @@ import { CartoonPage } from '../pages/cartoon/cartoon';
     HomePage,
     LoginPage,
     SignupPage,
-    CartoonPage
+    CartoonPage,
+    DevPage,
+    MainPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
+  
 })
 export class AppModule {}

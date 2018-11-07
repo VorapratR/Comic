@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { CartoonPage } from '../cartoon/cartoon';
+import { MainPage } from '../main/main';
 
 /**
  * Generated class for the LoginPage page.
@@ -21,8 +21,8 @@ export class LoginPage {
   }
 
   check() {
-    if(this.user =="vr" && this.password == "1"){
-      this.navCtrl.push(CartoonPage);
+    if(this.user =="1" && this.password == "1"){
+      this.navCtrl.push(MainPage);
     }else {
       alert("Username and Password unknow!!!");
     }

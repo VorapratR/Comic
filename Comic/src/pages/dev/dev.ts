@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { MainPage } from '../main/main';
 
 /**
- * Generated class for the SignupPage page.
+ * Generated class for the DevPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,18 +10,16 @@ import { MainPage } from '../main/main';
 
 @IonicPage()
 @Component({
-  selector: 'page-signup',
-  templateUrl: 'signup.html',
+  selector: 'page-dev',
+  templateUrl: 'dev.html',
 })
-export class SignupPage {
-  user:any;
-  name:any;
-  password:any;
+export class DevPage {
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  subscribe() {
-    this.navCtrl.push(MainPage);
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad DevPage');
   }
 
 }
