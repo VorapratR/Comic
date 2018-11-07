@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CartoonPage } from '../cartoon/cartoon';
 
 /**
- * Generated class for the LoginPage page.
+ * Generated class for the SignupPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,21 +11,18 @@ import { CartoonPage } from '../cartoon/cartoon';
 
 @IonicPage()
 @Component({
-  selector: 'page-login',
-  templateUrl: 'login.html',
+  selector: 'page-signup',
+  templateUrl: 'signup.html',
 })
-export class LoginPage {
+export class SignupPage {
   user:any;
+  name:any;
   password:any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  check() {
-    if(this.user =="vr" && this.password == "1"){
-      this.navCtrl.push(CartoonPage);
-    }else {
-      alert("Username and Password unknow!!!");
-    }
+  subscribe() {
+    this.navCtrl.push(CartoonPage);
   }
 
 }

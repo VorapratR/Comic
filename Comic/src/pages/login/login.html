@@ -7,12 +7,37 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>login</ion-title>
+    <ion-title>
+        <ion-icon ios="ios-lock" md="md-lock"></ion-icon>
+    </ion-title>
   </ion-navbar>
 
 </ion-header>
 
-
 <ion-content padding>
+    <ion-list>
+
+        <ion-item>
+          <ion-label floating>Username</ion-label>
+          <ion-input type="text" [(ngModel)] = "user"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label floating>Password</ion-label>
+          <ion-input type="text" [(ngModel)] = "password"></ion-input>
+        </ion-item>
+      
+    </ion-list>
+      
+    <div padding>
+        <button ion-button round full block (click) = "check()">Login</button>
+        <ion-title> or </ion-title>
+        <button ion-button round full>
+            <ion-icon ios="logo-facebook" md="logo-facebook"></ion-icon>
+        </button>
+    </div>
+
+
+  
 
 </ion-content>
