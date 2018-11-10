@@ -6,9 +6,10 @@
 -->
 <ion-header>
 
-    <ion-navbar>
+    <ion-navbar color="secondary">
       <ion-title>
-          <ion-icon ios="ios-options" md="md-options"></ion-icon>
+          Join AppToon Today
+          <ion-icon name="create" ></ion-icon>
       </ion-title>
     </ion-navbar>
   
@@ -16,28 +17,35 @@
   
   <ion-content padding>
       <ion-list>
-  
+
           <ion-item>
             <ion-label floating>Username</ion-label>
             <ion-input type="text" [(ngModel)] = "user"></ion-input>
-          </ion-item>
-          
-          <ion-item>
-              <ion-label floating>Name</ion-label>
-              <ion-input type="text" [(ngModel)] = "name"></ion-input>
           </ion-item>
         
           <ion-item>
             <ion-label floating>Password</ion-label>
             <ion-input type="text" [(ngModel)] = "password"></ion-input>
           </ion-item>
+
+          <ion-item>
+            <ion-label floating>Name</ion-label>
+            <ion-input type="text" [(ngModel)] = "name"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>Email</ion-label>
+            <ion-input type="text" [(ngModel)] = "email"></ion-input>
+          </ion-item>
         
       </ion-list>
         
       <div padding>
-          <button ion-button round full (click) = "subscribe()">SignUp</button>
-          <ion-title> or </ion-title>
-          <button ion-button round full>
+          <button ion-button round full (click) = "subscribe()" color="secondary" >SignUp</button>
+          <br>
+          <ion-title> ---------------- or --------------- </ion-title>
+          <br>
+          <button ion-button round full color="secondary">
               Login Facebook <br><ion-icon ios="logo-facebook" md="logo-facebook"></ion-icon>
           </button>
       </div>

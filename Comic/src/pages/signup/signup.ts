@@ -18,6 +18,7 @@ export class SignupPage {
   user:any;
   name:any;
   password:any;
+  email:any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
