@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Nomsod1Page } from '../nomsod1/nomsod1';
+import { Nomsod2Page } from '../nomsod2/nomsod2';
 
 /**
  * Generated class for the NomsodPage page.
@@ -22,4 +24,10 @@ export class NomsodPage {
     console.log('ionViewDidLoad NomsodPage');
   }
 
+  nomsod1(){
+    this.navCtrl.push(Nomsod1Page)
+  }
+  nomsod2(){
+    this.navCtrl.push(Nomsod2Page)
+  }
 }

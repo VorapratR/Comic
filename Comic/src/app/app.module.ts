@@ -8,13 +8,17 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
-import { CartoonPage } from '../pages/cartoon/cartoon';
-import { DevPage } from '../pages/dev/dev';
 import { MainPage } from '../pages/main/main';
 import { Tab1Page } from '../pages/tab1/tab1';
 import { Tab2Page } from '../pages/tab2/tab2';
 import { TabsPage } from '../pages/tabs/tabs';
 import { Tab3Page } from '../pages/tab3/tab3';
+import { JookgruPage } from '../pages/jookgru/jookgru';
+import { NomsodPage } from '../pages/nomsod/nomsod';
+import { Jookgru1Page } from '../pages/jookgru1/jookgru1';
+import { Jookgru2Page } from '../pages/jookgru2/jookgru2';
+import { Nomsod1Page } from '../pages/nomsod1/nomsod1';
+import { Nomsod2Page } from '../pages/nomsod2/nomsod2';
 
 @NgModule({
   declarations: [
@@ -22,13 +26,17 @@ import { Tab3Page } from '../pages/tab3/tab3';
     HomePage,
     LoginPage,
     SignupPage,
-    CartoonPage,
-    DevPage,
     MainPage,
     TabsPage,
     Tab1Page,
     Tab2Page,
-    Tab3Page
+    Tab3Page,
+    JookgruPage,
+    NomsodPage,
+    Jookgru1Page,
+    Jookgru2Page,
+    Nomsod1Page,
+    Nomsod2Page
   ],
   imports: [
     BrowserModule,
@@ -47,13 +55,17 @@ import { Tab3Page } from '../pages/tab3/tab3';
     HomePage,
     LoginPage,
     SignupPage,
-    CartoonPage,
-    DevPage,
     MainPage,
     TabsPage,
     Tab1Page,
     Tab2Page,
-    Tab3Page
+    Tab3Page,
+    JookgruPage,
+    NomsodPage,
+    Jookgru1Page,
+    Jookgru2Page,
+    Nomsod1Page,
+    Nomsod2Page
   ],
   providers: [
     StatusBar,

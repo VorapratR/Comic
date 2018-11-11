@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { JookgruPage } from '../jookgru/jookgru';
+import { NomsodPage } from '../nomsod/nomsod';
 
 /**
  * Generated class for the Tab1Page page.
@@ -22,10 +24,10 @@ export class Tab1Page {
     console.log('ionViewDidLoad Tab1Page');
   }
   jookgru(){
-    this.navCtrl.push
+    this.navCtrl.setRoot(JookgruPage)
   }
 
   nomsod(){
-    this.navCtrl.push
+    this.navCtrl.setRoot(NomsodPage)
   }
 }

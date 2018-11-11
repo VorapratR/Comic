@@ -7,12 +7,32 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>jookgru</ion-title>
+    <ion-title>
+    <ion-icon name="bookmark"></ion-icon>
+      Jook Gru
+    </ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+    <ion-card>
+        <ion-card-header>
+            <img src="../../assets/imgs/jookgru/logo-jookgru.jpg"/>
+        </ion-card-header>
+      
+        <ion-list>
+          <button ion-item (click)="jookgru1()">
+            <ion-icon name="medical" item-start></ion-icon>
+            Episode-1
+          </button>
+      
+          <button ion-item (click)="jookgru2()">
+            <ion-icon name="medical" item-start></ion-icon>
+            Episode-2
+          </button>
 
+        </ion-list>
+      </ion-card>
 </ion-content>
