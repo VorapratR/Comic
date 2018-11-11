@@ -21,5 +21,11 @@ export class Tab1Page {
   ionViewDidLoad() {
     console.log('ionViewDidLoad Tab1Page');
   }
+  jookgru(){
+    this.navCtrl.push
+  }
 
+  nomsod(){
+    this.navCtrl.push
+  }
 }

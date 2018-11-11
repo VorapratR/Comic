@@ -7,12 +7,47 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>tab1</ion-title>
+    <ion-title>
+      <ion-icon name="star"></ion-icon>
+      Toon Daily
+    </ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+    <ion-card>
+        <img src="../../assets/imgs/jookgru/logo-jookgru.jpg"/>
+        <ion-card-content>
+            <ion-row no-padding>
+                <ion-col>
+                    <h1>Jook Gru</h1>
+                </ion-col>
+                <ion-col text-right>
+                    <button ion-button clear small color="danger" icon-start (click)="jookgru()">
+                      <ion-icon name='book'></ion-icon>
+                      Read
+                    </button>
+                </ion-col>
+              </ion-row>
+        </ion-card-content>
+      </ion-card>
+      <br>
+      <ion-card>
+        <img src="../../assets/imgs/nomsod/logo-nomsod.jpg"/>
+        <ion-card-content>
+            <ion-row no-padding>
+                <ion-col>
+                    <h1>Nomsod</h1>
+                </ion-col>
+                <ion-col text-right>
+                    <button ion-button clear small color="danger" icon-start (click)="nomsod()">
+                      <ion-icon name='book'></ion-icon>
+                      Read
+                    </button>
+                </ion-col>
+              </ion-row>
+        </ion-card-content>
+      </ion-card>
 </ion-content>
