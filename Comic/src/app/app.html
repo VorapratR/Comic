@@ -1,2 +1,10 @@
 
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="content">
+
+  <ion-content padding>
+    <h2>test</h2>
+  </ion-content>
+
+</ion-menu>
+<ion-nav [root]="rootPage" #content></ion-nav>
+
