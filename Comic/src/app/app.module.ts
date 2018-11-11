@@ -11,6 +11,10 @@ import { SignupPage } from '../pages/signup/signup';
 import { CartoonPage } from '../pages/cartoon/cartoon';
 import { DevPage } from '../pages/dev/dev';
 import { MainPage } from '../pages/main/main';
+import { Tab1Page } from '../pages/tab1/tab1';
+import { Tab2Page } from '../pages/tab2/tab2';
+import { TabsPage } from '../pages/tabs/tabs';
+import { Tab3Page } from '../pages/tab3/tab3';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { MainPage } from '../pages/main/main';
     SignupPage,
     CartoonPage,
     DevPage,
-    MainPage
+    MainPage,
+    TabsPage,
+    Tab1Page,
+    Tab2Page,
+    Tab3Page
   ],
   imports: [
     BrowserModule,
@@ -41,7 +49,11 @@ import { MainPage } from '../pages/main/main';
     SignupPage,
     CartoonPage,
     DevPage,
-    MainPage
+    MainPage,
+    TabsPage,
+    Tab1Page,
+    Tab2Page,
+    Tab3Page
   ],
   providers: [
     StatusBar,

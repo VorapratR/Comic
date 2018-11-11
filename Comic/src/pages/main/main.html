@@ -19,9 +19,11 @@
 
 
 <ion-content padding>
-    <button ion-button round outline  (click) = "cartoon()">Read</button>
-    <button ion-button round outline  (click) = "dev()">Dev</button>
-
+    <ion-tabs>
+      <ion-tab [root]="tab1Page" tabTitle="Home" tabIcon="home"></ion-tab>
+      <ion-tab [root]="tab2Page" tabTitle="Profile" tabIcon="person"></ion-tab>
+      <ion-tab [root]="tab3Page" tabTitle="Developers" tabIcon="people"></ion-tab>
+    </ion-tabs>
   
 
 </ion-content>
