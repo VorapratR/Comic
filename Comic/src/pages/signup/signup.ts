@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MainPage } from '../main/main';
+import { LoadingController } from 'ionic-angular';
 
 /**
  * Generated class for the SignupPage page.
@@ -19,11 +20,20 @@ export class SignupPage {
   name:any;
   password:any;
   email:any;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
   }
 
-  subscribe() {
+  
+
+  presentLoading() {
+    const loader = this.loadingCtrl.create({
+      content: "Please wait...",
+      duration: 2000,
+    });
+    loader.present();
+    
     this.navCtrl.push(MainPage);
   }
-
 }
+
+
