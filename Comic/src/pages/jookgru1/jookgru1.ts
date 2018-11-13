@@ -24,7 +24,7 @@ export class Jookgru1Page {
     console.log('ionViewDidLoad Jookgru1Page');
   }
 
-  back(){
+  backHome(){
     this.navCtrl.push(JookgruPage);
   }
 

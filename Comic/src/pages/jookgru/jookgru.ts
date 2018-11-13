@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Jookgru1Page } from '../jookgru1/jookgru1';
 import { Jookgru2Page } from '../jookgru2/jookgru2';
+import { HomePage } from '../home/home';
+import { MainPage } from '../main/main';
 
 /**
  * Generated class for the JookgruPage page.
@@ -23,6 +25,7 @@ export class JookgruPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad JookgruPage');
   }
+
 
   jookgru1(){
     this.navCtrl.push(Jookgru1Page)

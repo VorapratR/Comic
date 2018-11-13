@@ -6,9 +6,33 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-      <ion-title text-right>| Jook Gru Ep.2 |</ion-title>
-  </ion-navbar>
+  <ion-toolbar>
+    <ion-row no-padding>
+
+      <ion-col>
+        <ion-buttons >
+            <button ion-button icon-only small (click)="backEp()" >
+              <p>EP 1</p>
+              <ion-icon name="arrow-back"></ion-icon>
+            </button>
+          </ion-buttons>
+      </ion-col>
+
+      <ion-col>
+        <ion-title>| Jook Gru Ep.2 |</ion-title>
+      </ion-col>
+
+    <ion-col>
+        <ion-buttons end>
+          <button ion-button icon-only small (click)="nextEp()" >
+            <p>EP 3</p>
+            <ion-icon name="arrow-forward"></ion-icon>
+          </button>
+        </ion-buttons>
+    </ion-col>    
+
+    </ion-row>
+  </ion-toolbar>
 
 </ion-header>
 

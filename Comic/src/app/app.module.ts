@@ -19,6 +19,8 @@ import { Jookgru1Page } from '../pages/jookgru1/jookgru1';
 import { Jookgru2Page } from '../pages/jookgru2/jookgru2';
 import { Nomsod1Page } from '../pages/nomsod1/nomsod1';
 import { Nomsod2Page } from '../pages/nomsod2/nomsod2';
+import { Jookgru3Page } from '../pages/jookgru3/jookgru3';
+import { Nomsod3Page } from '../pages/nomsod3/nomsod3';
 
 @NgModule({
   declarations: [
@@ -35,8 +37,10 @@ import { Nomsod2Page } from '../pages/nomsod2/nomsod2';
     NomsodPage,
     Jookgru1Page,
     Jookgru2Page,
+    Jookgru3Page,
     Nomsod1Page,
-    Nomsod2Page
+    Nomsod2Page,
+    Nomsod3Page
   ],
   imports: [
     BrowserModule,
@@ -64,8 +68,10 @@ import { Nomsod2Page } from '../pages/nomsod2/nomsod2';
     NomsodPage,
     Jookgru1Page,
     Jookgru2Page,
+    Jookgru3Page,
     Nomsod1Page,
-    Nomsod2Page
+    Nomsod2Page,
+    Nomsod3Page
   ],
   providers: [
     StatusBar,
