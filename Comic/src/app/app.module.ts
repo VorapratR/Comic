@@ -22,6 +22,7 @@ import { Nomsod2Page } from '../pages/nomsod2/nomsod2';
 import { Jookgru3Page } from '../pages/jookgru3/jookgru3';
 import { Nomsod3Page } from '../pages/nomsod3/nomsod3';
 
+
 @NgModule({
   declarations: [
     MyApp,
@@ -41,6 +42,7 @@ import { Nomsod3Page } from '../pages/nomsod3/nomsod3';
     Nomsod1Page,
     Nomsod2Page,
     Nomsod3Page
+    
   ],
   imports: [
     BrowserModule,
@@ -72,6 +74,7 @@ import { Nomsod3Page } from '../pages/nomsod3/nomsod3';
     Nomsod1Page,
     Nomsod2Page,
     Nomsod3Page
+   
   ],
   providers: [
     StatusBar,

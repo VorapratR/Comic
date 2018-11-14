@@ -23,8 +23,6 @@ export class SignupPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
   }
 
-  
-
   presentLoading() {
     const loader = this.loadingCtrl.create({
       content: "Please wait...",
