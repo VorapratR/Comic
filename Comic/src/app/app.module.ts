@@ -22,6 +22,12 @@ import { Nomsod2Page } from '../pages/nomsod2/nomsod2';
 import { Jookgru3Page } from '../pages/jookgru3/jookgru3';
 import { Nomsod3Page } from '../pages/nomsod3/nomsod3';
 
+//Firebase
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { FIREBASE_INFO } from './firebase.info';
+
+
 
 @NgModule({
   declarations: [
@@ -53,7 +59,9 @@ import { Nomsod3Page } from '../pages/nomsod3/nomsod3';
           menuType: 'overlay',
         }
       }
-    })
+    }),
+    AngularFireAuthModule,
+    AngularFireModule.initializeApp(FIREBASE_INFO)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
