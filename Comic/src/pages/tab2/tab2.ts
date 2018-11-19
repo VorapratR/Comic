@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { TranslateService } from '@ngx-translate/core';
 
 /**
  * Generated class for the Tab2Page page.
@@ -14,8 +15,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'tab2.html',
 })
 export class Tab2Page {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  lang:any;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public translate: TranslateService) {
+    this.lang = 'en';
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
+  }
+  switchLanguage() {
+    this.translate.use(this.lang);
   }
 
   ionViewDidLoad() {

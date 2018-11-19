@@ -9,7 +9,7 @@
   <ion-toolbar>
     <ion-title>
       <ion-icon name="star"></ion-icon>
-      Toon Daily
+      {{ 'Toon Daily' | translate }}
     </ion-title>
   </ion-toolbar>
 
@@ -24,12 +24,12 @@
         <ion-card-content>
             <ion-row no-padding>
                 <ion-col>
-                    <h1>Jook Gru</h1>
+                    <h1>{{ 'Jook Gru' | translate }}</h1>
                 </ion-col>
                 <ion-col text-right>
                     <button ion-button clear small color="danger" icon-start (click)="jookgru()">
                       <ion-icon name='book'></ion-icon>
-                      Read
+                      {{ 'Read' | translate }}
                     </button>
                 </ion-col>
               </ion-row>
@@ -41,12 +41,12 @@
         <ion-card-content>
             <ion-row no-padding>
                 <ion-col>
-                    <h1>Nomsod</h1>
+                    <h1>{{ 'Nomsod' | translate }}</h1>
                 </ion-col>
                 <ion-col text-right>
                     <button ion-button clear small color="danger" icon-start (click)="nomsod()">
                       <ion-icon name='book'></ion-icon>
-                      Read
+                      {{ 'Read' | translate }}
                     </button>
                 </ion-col>
               </ion-row>

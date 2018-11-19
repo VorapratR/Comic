@@ -6,20 +6,20 @@
           <ion-col>
             <ion-buttons >
                 <button ion-button icon-only small (click)="backEp()" >
-                  <p>Ep 2</p>
+                  <p>{{ 'EP 2' | translate }}</p>
                   <ion-icon name="arrow-back"></ion-icon>
                 </button>
               </ion-buttons>
           </ion-col>
     
           <ion-col>
-              <ion-title text-right>| Nomsod Ep.3 |</ion-title>
+              <ion-title text-right>| {{ 'Nomsod Ep.3' | translate }} |</ion-title>
           </ion-col>
     
         <ion-col>
             <ion-buttons end>
               <button ion-button icon-only small (click)="nextEp">
-                <p>Ep 4</p>
+                <p>{{ 'EP 4' | translate }}</p>
                 <ion-icon name="arrow-forward"></ion-icon>
               </button>
             </ion-buttons>
