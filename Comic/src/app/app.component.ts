@@ -6,9 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { TranslateService } from '@ngx-translate/core';
 
 import { HomePage } from '../pages/home/home';
-import { JookgruPage } from '../pages/jookgru/jookgru';
-import { NomsodPage } from '../pages/nomsod/nomsod';
-import { Tab1Page } from '../pages/tab1/tab1';
+import { MainPage } from '../pages/main/main';
 
 @Component({
   templateUrl: 'app.html'
@@ -36,16 +34,10 @@ export class MyApp {
     this.translate.use(this.lang);
   }
 
-  openJook(){
-    this.nav.setRoot(JookgruPage);
-  }
 
-  openNom(){
-    this.nav.setRoot(NomsodPage);
-  }
 
   openHome(){
-    this.nav.setRoot(Tab1Page);
+    this.nav.setRoot(MainPage);
   }
 
     
