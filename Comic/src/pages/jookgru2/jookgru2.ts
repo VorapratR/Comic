@@ -3,12 +3,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Jookgru1Page } from '../jookgru1/jookgru1';
 import { Jookgru3Page } from '../jookgru3/jookgru3';
 
-/**
- * Generated class for the Jookgru2Page page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
