@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { JookgruPage } from '../jookgru/jookgru';
-import { NomsodPage } from '../nomsod/nomsod';
 import { SompondPage } from '../sompond/sompond';
+import { Sompond2Page } from '../sompond2/sompond2';
 
 /**
- * Generated class for the Tab1Page page.
+ * Generated class for the Sompond1Page page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -13,24 +12,23 @@ import { SompondPage } from '../sompond/sompond';
 
 @IonicPage()
 @Component({
-  selector: 'page-tab1',
-  templateUrl: 'tab1.html',
+  selector: 'page-sompond1',
+  templateUrl: 'sompond1.html',
 })
-export class Tab1Page {
+export class Sompond1Page {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad Tab1Page');
+    console.log('ionViewDidLoad Sompond1Page');
   }
-  jookgru(){
-    this.navCtrl.setRoot(JookgruPage)
+  backHome(){
+    this.navCtrl.push(SompondPage);
   }
-  nomsod(){
-    this.navCtrl.setRoot(NomsodPage)
+
+  nextEp(){
+    this.navCtrl.push(Sompond2Page);
   }
-  sompond(){
-    this.navCtrl.setRoot(SompondPage)
-  }
+
 }

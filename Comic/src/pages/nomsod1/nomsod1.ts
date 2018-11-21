@@ -3,12 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { NomsodPage } from '../nomsod/nomsod';
 import { Nomsod2Page } from '../nomsod2/nomsod2';
 
-/**
- * Generated class for the Nomsod1Page page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 @IonicPage()
 @Component({

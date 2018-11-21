@@ -31,6 +31,11 @@ import { FIREBASE_INFO } from './firebase.info';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { SompondPage } from '../pages/sompond/sompond';
+import { Sompond1Page } from '../pages/sompond1/sompond1';
+import { Sompond2Page } from '../pages/sompond2/sompond2';
+import { Sompond3Page } from '../pages/sompond3/sompond3';
+import { Sompond4Page } from '../pages/sompond4/sompond4';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -49,12 +54,17 @@ export function createTranslateLoader(http: HttpClient) {
     Tab3Page,
     JookgruPage,
     NomsodPage,
+    SompondPage,
     Jookgru1Page,
     Jookgru2Page,
     Jookgru3Page,
     Nomsod1Page,
     Nomsod2Page,
-    Nomsod3Page
+    Nomsod3Page,
+    Sompond1Page,
+    Sompond2Page,
+    Sompond3Page,
+    Sompond4Page
     
   ],
   imports: [
@@ -91,12 +101,17 @@ export function createTranslateLoader(http: HttpClient) {
     Tab3Page,
     JookgruPage,
     NomsodPage,
+    SompondPage,
     Jookgru1Page,
     Jookgru2Page,
     Jookgru3Page,
     Nomsod1Page,
     Nomsod2Page,
-    Nomsod3Page
+    Nomsod3Page,
+    Sompond1Page,
+    Sompond2Page,
+    Sompond3Page,
+    Sompond4Page
    
   ],
   providers: [
