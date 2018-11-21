@@ -1,9 +1,12 @@
+import { FIREBASE_INFO } from './../../app/firebase.info';
 import { MainPage } from './../main/main';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { User } from '../../models/user';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { LoadingController } from 'ionic-angular';
+import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
+import firebase from 'firebase';
 
 /**
  * Generated class for the LoginPage page.
@@ -20,11 +23,12 @@ import { LoadingController } from 'ionic-angular';
 export class LoginPage {
 
   user = {} as User;
+  userfb: any = false;
 
-  constructor(private fireAuth: AngularFireAuth,private toast: ToastController ,public navCtrl: NavController, public navParams: NavParams,public loadingCtrl: LoadingController) {
+  constructor(private facebook: Facebook,private fireAuth: AngularFireAuth,private toast: ToastController ,public navCtrl: NavController, public navParams: NavParams,public loadingCtrl: LoadingController) {
   }
 
-    async login(user: User){
+  async login(user: User){
       const loader = this.loadingCtrl.create({
           content: "Please wait...",
           duration: 1000,
@@ -46,6 +50,23 @@ export class LoginPage {
         }).present();
         
       }
+  }
+
+  loginFB(){
+    let provider = new firebase.auth.FacebookAuthProvider();
+
+    firebase.auth().signInWithRedirect(provider).then(()=>{
+      firebase.auth().getRedirectResult().then((result)=>{this.navCtrl.push(MainPage);
+        alert(JSON.stringify(result));
+        this.userfb = true;
+      }).catch(function(error) {
+        alert(JSON.stringify(error))
+      });
+    
+    if(this.userfb)
+      this.navCtrl.push(MainPage);
+    })
+
   }
 
 }

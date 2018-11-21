@@ -22,10 +22,21 @@ import { Nomsod2Page } from '../pages/nomsod2/nomsod2';
 import { Jookgru3Page } from '../pages/jookgru3/jookgru3';
 import { Nomsod3Page } from '../pages/nomsod3/nomsod3';
 
-//Firebase
+//Firebase && ionic framework
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { FIREBASE_INFO } from './firebase.info';
+import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
+import firebase from 'firebase';
+
+firebase.initializeApp({
+  apiKey: "AIzaSyD9Zwow7q34-FEEpIHLptVpBX1A8Pq1EOc",
+  authDomain: "mobileapp-softdev.firebaseapp.com",
+  databaseURL: "https://mobileapp-softdev.firebaseio.com",
+  projectId: "mobileapp-softdev",
+  storageBucket: "mobileapp-softdev.appspot.com",
+  messagingSenderId: "60396671337"
+});
 
 //i18n
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
@@ -117,6 +128,7 @@ export function createTranslateLoader(http: HttpClient) {
   providers: [
     StatusBar,
     SplashScreen,
+    Facebook,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
   
