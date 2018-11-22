@@ -15,16 +15,10 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: 'tab2.html',
 })
 export class Tab2Page {
-  lang:any;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public translate: TranslateService) {
-    this.lang = 'en';
-    this.translate.setDefaultLang('en');
-    this.translate.use('en');
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    
   }
-  switchLanguage() {
-    this.translate.use(this.lang);
-  }
-
+  
   ionViewDidLoad() {
     console.log('ionViewDidLoad Tab2Page');
   }

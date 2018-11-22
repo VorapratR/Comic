@@ -9,11 +9,20 @@
   
     <ion-content>
       <ion-list>
-        <button ion-item (click)="openHome()" menuClose>Home</button>
+        <button ion-item (click)="openHome()" menuClose>{{ 'Home' | translate }}</button>
         <button ion-item>N/A</button>
         <button ion-item>N/A</button>
         <button ion-item>N/A</button>
-        <button ion-item>Log-Out</button>
+        <button ion-item>{{ 'Log-Out' | translate }}</button>
+      </ion-list>
+      <ion-list>
+          <ion-item>
+              <ion-label>{{ 'Language' | translate }}</ion-label>
+              <ion-select [(ngModel)]="lang" (ionChange)="switchLanguage()">
+                <ion-option value="en">{{ 'English' | translate }}</ion-option>
+                <ion-option value="th">{{ 'Thai' | translate }}</ion-option>
+              </ion-select>
+            </ion-item>
       </ion-list>
     </ion-content>
   
