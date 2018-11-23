@@ -3,6 +3,8 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { FileChooser } from '@ionic-native/file-chooser';
+import { File } from '@ionic-native/file';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -21,6 +23,8 @@ import { Nomsod1Page } from '../pages/nomsod1/nomsod1';
 import { Nomsod2Page } from '../pages/nomsod2/nomsod2';
 import { Jookgru3Page } from '../pages/jookgru3/jookgru3';
 import { Nomsod3Page } from '../pages/nomsod3/nomsod3';
+import { Tab4Page } from '../pages/tab4/tab4';
+
 
 //Firebase && ionic framework
 import { AngularFireModule } from 'angularfire2';
@@ -63,6 +67,7 @@ export function createTranslateLoader(http: HttpClient) {
     Tab1Page,
     Tab2Page,
     Tab3Page,
+    Tab4Page,
     JookgruPage,
     NomsodPage,
     SompondPage,
@@ -75,8 +80,7 @@ export function createTranslateLoader(http: HttpClient) {
     Sompond1Page,
     Sompond2Page,
     Sompond3Page,
-    Sompond4Page
-    
+    Sompond4Page,
   ],
   imports: [
     BrowserModule,
@@ -110,6 +114,7 @@ export function createTranslateLoader(http: HttpClient) {
     Tab1Page,
     Tab2Page,
     Tab3Page,
+    Tab4Page,
     JookgruPage,
     NomsodPage,
     SompondPage,
@@ -122,13 +127,13 @@ export function createTranslateLoader(http: HttpClient) {
     Sompond1Page,
     Sompond2Page,
     Sompond3Page,
-    Sompond4Page
-   
+    Sompond4Page,
   ],
   providers: [
     StatusBar,
     SplashScreen,
     Facebook,
+    FileChooser,File,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
   
