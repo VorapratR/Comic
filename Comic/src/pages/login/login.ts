@@ -7,7 +7,6 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { LoadingController } from 'ionic-angular';
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 import firebase from 'firebase';
-
 /**
  * Generated class for the LoginPage page.
  *
@@ -23,7 +22,6 @@ import firebase from 'firebase';
 export class LoginPage {
 
   user = {} as User;
-  userfb: any = false;
 
   constructor(private facebook: Facebook,private fireAuth: AngularFireAuth,private toast: ToastController ,public navCtrl: NavController, public navParams: NavParams,public loadingCtrl: LoadingController) {
   }
@@ -56,15 +54,19 @@ export class LoginPage {
     let provider = new firebase.auth.FacebookAuthProvider();
 
     firebase.auth().signInWithRedirect(provider).then(()=>{
-      firebase.auth().getRedirectResult().then((result)=>{this.navCtrl.push(MainPage);
+      firebase.auth().getRedirectResult().then((result)=>{
         alert(JSON.stringify(result));
-        this.userfb = true;
+        this.navCtrl.push(MainPage);
       }).catch(function(error) {
         alert(JSON.stringify(error))
       });
-    
-    if(this.userfb)
-      this.navCtrl.push(MainPage);
+
+    /*this.facebook.login(["email"]).then((loginResponse) => {
+
+      let credential = firebase.auth.FacebookAuthProvider.credential(loginResponse.authResponse.accessToken);
+      
+      firebase.auth().signInWithCredential(credential).then((info) => {
+        alert(JSON.stringify(info));*/
     })
 
   }
