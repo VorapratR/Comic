@@ -8,8 +8,8 @@
 
   <ion-navbar>
     <ion-title>
-      <ion-icon name="people"></ion-icon>
-      {{ 'Developers' | translate }}
+      <ion-icon name="cloud-upload"></ion-icon>
+      {{ 'Upload' | translate }}
     </ion-title>
   </ion-navbar>
 
@@ -20,12 +20,12 @@
   <ion-list>
 
       <ion-item>
-        <ion-label floating>Cartoon Name</ion-label>
+        <ion-label floating>{{ 'Cartoon Name' | translate }}</ion-label>
         <ion-input type="text"></ion-input>
       </ion-item>
     
       <ion-item>
-        <ion-label floating>Episode</ion-label>
+        <ion-label floating>{{ 'Episode' | translate }}</ion-label>
         <ion-input type="text"></ion-input>
       </ion-item>
 
@@ -33,10 +33,10 @@
   </ion-list>
   <br>
   <div padding>
-      <button ion-button round full color="secondary" (click) = "choose1()" >Upload Section 1</button>
-      <button ion-button round full color="secondary" >Upload Section 2</button>
-      <button ion-button round full color="secondary" >Upload Section 3</button>
-      <button ion-button round full color="secondary" >Submit</button>
+      <button ion-button round full color="secondary" (click) = "choose1()" >{{ 'Upload Section' | translate }}1</button>
+      <button ion-button round full color="secondary" >{{ 'Upload Section' | translate }} 2</button>
+      <button ion-button round full color="secondary" >{{ 'Upload Section' | translate }} 3</button>
+      <button ion-button round full color="secondary" >{{ 'Submit' | translate }}</button>
   </div>
 
 
