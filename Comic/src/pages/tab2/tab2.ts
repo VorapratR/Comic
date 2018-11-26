@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { LoginPage } from './../login/login';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireAuth } from 'angularfire2/auth';
 import { TranslateService } from '@ngx-translate/core';
 
 /**
@@ -15,12 +18,14 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: 'tab2.html',
 })
 export class Tab2Page {
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  userName:any;
+  userEmail:any;
+  constructor(public navCtrl: NavController, public navParams: NavParams,private fdb: AngularFireDatabase) {
     
   }
   
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad Tab2Page');
+  showUser(email) {
+    this.userEmail = email;
   }
 
 }

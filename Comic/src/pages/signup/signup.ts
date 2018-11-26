@@ -1,3 +1,4 @@
+import { AngularFireDatabase } from 'angularfire2/database';
 import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
@@ -18,12 +19,23 @@ import { AngularFireAuth } from 'angularfire2/auth';
   templateUrl: 'signup.html',
 })
 export class SignupPage {
-
+  arrData = [];
   user = {} as User;
-  name:any;
+  userName:any;
+  userEmail:any;
 
-  constructor(private fireAuth: AngularFireAuth,private toast: ToastController ,public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
-  }
+  constructor(private fireAuth: AngularFireAuth,
+              private toast: ToastController ,
+              public navCtrl: NavController, 
+              public navParams: NavParams, 
+              public loadingCtrl: LoadingController,
+              private fdb: AngularFireDatabase) {
+                this.fdb.list('/member/').valueChanges().subscribe(_data => {
+                  this.arrData = _data;
+
+                  console.log(this.arrData);
+                });
+  } 
 
   async signup(user: User){
     const loader = this.loadingCtrl.create({
@@ -32,10 +44,15 @@ export class SignupPage {
     });
     loader.present();
 
+    var packData = {
+        email:this.userEmail,
+        name:this.userName
+      };
+      this.fdb.list("/member/").push(packData);
+
     try{
       const info = await this.fireAuth.auth.createUserWithEmailAndPassword(user.email, user.password);
       
-
       if(info){
         this.navCtrl.push(HomePage);
       }

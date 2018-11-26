@@ -29,6 +29,7 @@ import { Tab4Page } from '../pages/tab4/tab4';
 //Firebase && ionic framework
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { FIREBASE_INFO } from './firebase.info';
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 import firebase from 'firebase';
@@ -94,6 +95,7 @@ export function createTranslateLoader(http: HttpClient) {
     }),
     AngularFireAuthModule,
     AngularFireModule.initializeApp(FIREBASE_INFO),
+    AngularFireDatabaseModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
