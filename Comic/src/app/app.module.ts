@@ -23,7 +23,6 @@ import { Nomsod1Page } from '../pages/nomsod1/nomsod1';
 import { Nomsod2Page } from '../pages/nomsod2/nomsod2';
 import { Jookgru3Page } from '../pages/jookgru3/jookgru3';
 import { Nomsod3Page } from '../pages/nomsod3/nomsod3';
-import { Tab4Page } from '../pages/tab4/tab4';
 
 
 //Firebase && ionic framework
@@ -68,7 +67,6 @@ export function createTranslateLoader(http: HttpClient) {
     Tab1Page,
     Tab2Page,
     Tab3Page,
-    Tab4Page,
     JookgruPage,
     NomsodPage,
     SompondPage,
@@ -116,7 +114,6 @@ export function createTranslateLoader(http: HttpClient) {
     Tab1Page,
     Tab2Page,
     Tab3Page,
-    Tab4Page,
     JookgruPage,
     NomsodPage,
     SompondPage,
