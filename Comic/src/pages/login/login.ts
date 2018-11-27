@@ -1,6 +1,5 @@
 import { FIREBASE_INFO } from './../../app/firebase.info';
 import { MainPage } from './../main/main';
-import { Tab2Page } from './../tab2/tab2';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { User } from '../../models/user';
@@ -24,7 +23,7 @@ export class LoginPage {
 
   user = {} as User;
 
-  constructor(private show:Tab2Page ,private facebook: Facebook,private fireAuth: AngularFireAuth,private toast: ToastController ,public navCtrl: NavController, public navParams: NavParams,public loadingCtrl: LoadingController) {
+  constructor(private facebook: Facebook,private fireAuth: AngularFireAuth,private toast: ToastController ,public navCtrl: NavController, public navParams: NavParams,public loadingCtrl: LoadingController) {
   }
 
   async login(user: User){

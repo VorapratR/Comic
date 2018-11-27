@@ -18,14 +18,8 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: 'tab2.html',
 })
 export class Tab2Page {
-  userName:any;
-  userEmail:any;
   constructor(public navCtrl: NavController, public navParams: NavParams,private fdb: AngularFireDatabase) {
     
-  }
-  
-  showUser(email) {
-    this.userEmail = email;
   }
 
 }
