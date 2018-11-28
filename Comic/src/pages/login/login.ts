@@ -6,6 +6,7 @@ import { User } from '../../models/user';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { LoadingController } from 'ionic-angular';
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
+import firebase from 'firebase';
 /**
  * Generated class for the LoginPage page.
  *
@@ -25,6 +26,7 @@ export class LoginPage {
 
   user = {} as User;
   userData:any;
+  public name:any;
 
   constructor(private facebook: Facebook,private fireAuth: AngularFireAuth,private toast: ToastController ,public navCtrl: NavController, public navParams: NavParams,public loadingCtrl: LoadingController) {
   }
@@ -55,7 +57,7 @@ export class LoginPage {
 
   async loginFB(){
     //let provider = new firebase.auth.FacebookAuthProvider();
-    try{
+    /*try{
       const infoFB = await this.facebook.login(['public_profile', 'email']);
       this.facebook.login(['public_profile', 'email']).then((response: FacebookLoginResponse) => {
         this.facebook.api('me?fields=id,name,email,first_name,picture.width(250).height(250).as(picture_large)',[]).then(profile => {
@@ -77,25 +79,25 @@ export class LoginPage {
           duration : 1000,
           cssClass:"error"
         }).present();
-      }
+      }*/
     /*firebase.auth().signInWithRedirect(provider).then(()=>{
       firebase.auth().getRedirectResult().then((result)=>{
         alert(JSON.stringify(result));
         this.navCtrl.push(MainPage);
       }).catch(function(error) {
         alert(JSON.stringify(error))
-      });
+      });*/
 
-    /*this.facebook.login(["email"]).then((loginResponse) => {
+      const infoFB = await this.facebook.login(["email"]);
+      this.facebook.login(["email"]).then((loginResponse) => {
 
       let credential = firebase.auth.FacebookAuthProvider.credential(loginResponse.authResponse.accessToken);
       
       firebase.auth().signInWithCredential(credential).then((info) => {
-        alert(JSON.stringify(info));*/
-    }
-
-    getData() {
-      return this.userData;
-    }
+    })
+    })
+      if(infoFB){ await this.navCtrl.push(MainPage); }
   }
+}
+
 
