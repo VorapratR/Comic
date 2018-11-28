@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { LoginPage } from './../login/login';
 import { AngularFireDatabase } from 'angularfire2/database';
-import { AngularFireAuth } from 'angularfire2/auth';
-import { TranslateService } from '@ngx-translate/core';
 
 /**
  * Generated class for the Tab2Page page.
@@ -19,7 +16,6 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class Tab2Page {
   constructor(public navCtrl: NavController, public navParams: NavParams,private fdb: AngularFireDatabase) {
-    
   }
 
 }

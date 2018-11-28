@@ -3,8 +3,6 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-import { FileChooser } from '@ionic-native/file-chooser';
-import { File } from '@ionic-native/file';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -30,9 +28,10 @@ import { Tab4Page } from '../pages/tab4/tab4';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuth } from 'angularfire2/auth';
 import { FIREBASE_INFO } from './firebase.info';
-import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 import firebase from 'firebase';
+import { Facebook } from '@ionic-native/facebook';
 
 firebase.initializeApp({
   apiKey: "AIzaSyD9Zwow7q34-FEEpIHLptVpBX1A8Pq1EOc",
@@ -135,7 +134,7 @@ export function createTranslateLoader(http: HttpClient) {
     StatusBar,
     SplashScreen,
     Facebook,
-    FileChooser,File,
+    AngularFireAuth,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
   

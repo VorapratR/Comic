@@ -6,7 +6,6 @@ import { User } from '../../models/user';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { LoadingController } from 'ionic-angular';
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
-import firebase from 'firebase';
 /**
  * Generated class for the LoginPage page.
  *
@@ -20,8 +19,12 @@ import firebase from 'firebase';
   templateUrl: 'login.html',
 })
 export class LoginPage {
+  static getData(): any {
+    throw new Error("Method not implemented.");
+  }
 
   user = {} as User;
+  userData:any;
 
   constructor(private facebook: Facebook,private fireAuth: AngularFireAuth,private toast: ToastController ,public navCtrl: NavController, public navParams: NavParams,public loadingCtrl: LoadingController) {
   }
@@ -50,10 +53,32 @@ export class LoginPage {
       }
   }
 
-  loginFB(){
-    let provider = new firebase.auth.FacebookAuthProvider();
-
-    firebase.auth().signInWithRedirect(provider).then(()=>{
+  async loginFB(){
+    //let provider = new firebase.auth.FacebookAuthProvider();
+    try{
+      const infoFB = await this.facebook.login(['public_profile', 'email']);
+      this.facebook.login(['public_profile', 'email']).then((response: FacebookLoginResponse) => {
+        this.facebook.api('me?fields=id,name,email,first_name,picture.width(250).height(250).as(picture_large)',[]).then(profile => {
+          this.userData = {
+            email: profile['email'],
+            first_name: profile['first_name'],
+            picture: profile['picture_large']['data']['url'],
+            username: profile['name']
+          };
+        });
+      });
+  
+      if(infoFB){
+        await this.navCtrl.push(MainPage);
+        }
+      }
+      catch(e){
+        this.toast.create({
+          duration : 1000,
+          cssClass:"error"
+        }).present();
+      }
+    /*firebase.auth().signInWithRedirect(provider).then(()=>{
       firebase.auth().getRedirectResult().then((result)=>{
         alert(JSON.stringify(result));
         this.navCtrl.push(MainPage);
@@ -67,8 +92,10 @@ export class LoginPage {
       
       firebase.auth().signInWithCredential(credential).then((info) => {
         alert(JSON.stringify(info));*/
-    })
+    }
 
+    getData() {
+      return this.userData;
+    }
   }
 
-}
